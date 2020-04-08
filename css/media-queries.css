@@ -8,76 +8,93 @@
         margin: 0;
         display: grid;
         grid-template-columns: 1fr;
-        grid-template-areas: "alert" "h1" "nav" "header-img" "main" "sub-section" "footer";
-        grid-row-gap: 2em;
+        grid-template-areas:
+                "alert"
+                "h1"
+                "nav"
+                "header-img"
+                "main"
+                "sub-section"
+                "footer";
+        width: 1vw;
     }
 
     .alert-info {
         grid-area: alert;
-        background: lightblue;
+        grid: flex;
+        text-align: center;
+        background: #CCFFFF;
         border: solid 2px lightgrey;
         padding: 1em;
-        margin: auto;
+        margin: .5em;
     }
 
-    .alert-info > a {
+    .alert-info>a {
         text-decoration: none;
         color: black;
     }
 
     h1 {
         grid-area: h1;
-        font-size: 5em;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
-
+        font-size: 3em;
+        text-align: center;
+        margin: 0;
+        padding: 0;
     }
 
     nav {
         grid-area: nav;
+        display: flex;
+        justify-content: center;
+        /*align-content: stretch;*/
     }
 
     ul {
         list-style-type: none;
         display: flex;
         flex-direction: column;
-        justify-content: center;
-        align-items: center;
+        text-align: center;
+        width: 100%;
+        padding: 0;
     }
 
     li {
         padding: 1em;
-        background: gray;
-        margin: 1em;
-        text-align: center;
-        width: 40%;
-
-
+        background: lightgrey;
+        margin: .5em;
+        font-weight: bold;
     }
 
     .header-img {
         grid-area: header-img;
-        margin: 0 auto;
-        width: 50%;
-        height: 50%;
+        margin: .5em;
+        padding: 0;
+        /*grid: flex;*/
+        /*text-align: center;*/
     }
-    img {
-        width:339px;
-        height:224px
 
+    img {
+        height: 224px;
+        width: 339px;
+        text-align: center;
     }
 
     .main {
         grid-area: main;
+        padding: 0;
+        margin: .5em;
     }
 
     .sub-section {
         grid-area: sub-section;
+        font-style: italic;
+        padding: 0;
+        margin: .5em;
     }
 
     footer {
         grid-area: footer;
+        margin-top: 5em;
     }
 }
+
